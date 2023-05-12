@@ -1,0 +1,134 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"airbnb/hooks",
+		"airbnb-typescript",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:prettier/recommended",
+		"plugin:import/recommended"
+	],
+	// Specifying Parser
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"tsconfigRootDir": ".",
+		"project": ["./tsconfig.json"]
+	},
+	// Configuring third-party plugins
+	"plugins": ["react", "@typescript-eslint"],
+	// Resolve imports
+	"settings": {
+		"import/resolver": {
+			"typescript": {
+				"project": "./tsconfig.json"
+			}
+		}
+	},
+	"rules": {
+		"import/no-extraneous-dependencies": 0,
+		"react/function-component-definition": 0,
+		"default-param-last": 0,
+		"react/jsx-props-no-spreading": 0,
+		"import/prefer-default-export": 0,
+		"react/react-in-jsx-scope": 0,
+		"react-hooks/rules-of-hooks": "error",
+		"react/state-in-constructor": 0,
+		"indent": 0,
+		"react/prop-types": 0,
+		"jsx-a11y/click-events-have-key-events": 0,
+		"arrow-body-style": 0,
+		"jsx-a11y/no-onchange": 0,
+		"react/prefer-stateless-function": 0,
+		"no-unused-vars": "warn",
+		"no-empty-pattern": "warn",
+		"jsx-a11y/anchor-is-valid": 0,
+		"no-param-reassign": 0,
+		"class-methods-use-this": 0,
+		"linebreak-style": "off",
+		"@typescript-eslint/no-explicit-any": "warn",
+		"react-hooks/exhaustive-deps": "off",
+		"object-shorthand": "error",
+		"no-console": "warn",
+		"no-undef": 0,
+		"no-new": 0,
+		"@typescript-eslint/no-unused-vars": "warn",
+		"no-underscore-dangle": "off",
+		"prefer-template": "error",
+		"constructor-super": "off", // ts(2335) & ts(2377)
+		"getter-return": "off", // ts(2378)
+		"no-const-assign": "off", // ts(2588)
+		"no-dupe-args": "off", // ts(2300)
+		"no-dupe-class-members": "off", // ts(2393) & ts(2300)
+		"no-dupe-keys": "off", // ts(1117)
+		"no-func-assign": "off", // ts(2539)
+		"no-import-assign": "off", // ts(2539) & ts(2540)
+		"no-new-symbol": "off", // ts(7009)
+		"no-obj-calls": "off", // ts(2349)
+		"no-redeclare": "off", // ts(2451)
+		"no-setter-return": "off", // ts(2408)
+		"no-this-before-super": "off", // ts(2376)
+		"no-unreachable": "off", // ts(7027)
+		"no-unsafe-negation": "off", // ts(2365) & ts(2360) & ts(2358)
+		"no-var": "error", // ts transpiles let/const to var, so no need for vars any more
+		"prefer-const": "error", // ts provides better types with const
+		"prefer-rest-params": "error", // ts provides better types with rest args over arguments
+		"prefer-spread": "error", // ts transpiles spread to apply, so no need for manual apply
+		"valid-typeof": "off", // ts(2367)
+		"@typescript-eslint/adjacent-overload-signatures": "error",
+		"@typescript-eslint/ban-ts-comment": "error",
+		"no-array-constructor": "off",
+		"@typescript-eslint/no-array-constructor": "error",
+		"no-empty-function": "off",
+		"@typescript-eslint/no-empty-function": "error",
+		"@typescript-eslint/no-empty-interface": "error",
+		"@typescript-eslint/no-extra-non-null-assertion": "error",
+		"no-extra-semi": "off",
+		"@typescript-eslint/no-extra-semi": "error",
+		"@typescript-eslint/no-inferrable-types": "error",
+		"no-loss-of-precision": "off",
+		"@typescript-eslint/no-loss-of-precision": "error",
+		"@typescript-eslint/no-misused-new": "error",
+		"@typescript-eslint/no-namespace": "error",
+		"@typescript-eslint/no-non-null-asserted-optional-chain": "error",
+		"@typescript-eslint/no-non-null-assertion": "warn",
+		"@typescript-eslint/no-this-alias": "error",
+		"@typescript-eslint/no-unnecessary-type-constraint": "error",
+		"@typescript-eslint/no-var-requires": "error",
+		"@typescript-eslint/prefer-as-const": "error",
+		"@typescript-eslint/prefer-namespace-keyword": "error",
+		"@typescript-eslint/triple-slash-reference": "error",
+		"@typescript-eslint/ban-types": [
+			"error",
+			{
+				"extendDefaults": true,
+				"types": {
+					"{}": false
+				}
+			}
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"indentStyle": "space",
+				"useTabs": true,
+				"trailingComma": "es5",
+				"singleQuote": true,
+				"printWidth": 100,
+				"tabWidth": 2,
+				"semi": true,
+				"endOfLine": "auto"
+			}
+		]
+	}
+}
